@@ -21,7 +21,10 @@ chatbots = dict()
 
 @app.route('/chatbot', methods=['POST'])
 def chatbot_handler():
-    json_data = json.loads(request.data.decode('utf-8'))
+    if request.data.decode('utf-8') == '':
+        json_data = request.form.to_dict()
+    else:
+        json_data = json.loads(request.data.decode('utf-8'))
     user_id = json_data['user_id']
     text = json_data['text']
 
