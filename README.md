@@ -75,17 +75,16 @@ mongo "mongodb://<username>:<password>@stitch.mongodb.com:27020/?authMechanism=P
 ```
 
 ```
-exports = function(text){
-  const http = context.services.get("http");
-  http.post({
+exports = async function(text) {
+  let res = await context.http.post({
     url: "http://www.der.ai/chatbot",
-    user_id: context.user.id,
-    text: arg
-  }).then(res => {
-    res = JSON.parse(res.body.text());
-    let output = res.output;
-    return {output: output};
-  }).catch( err => { console.log("error in http call: " + err); }); 
+    form: {
+      user_id: context.user.id,
+      text: text
+    }
+  });
+  
+  return EJSON.parse(res.body.text());
 };
 ```
 
