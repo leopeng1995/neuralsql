@@ -5,3 +5,5 @@ dist/
 examples/
 
 *.pyc
+*.sqlite3
+*.pickle
