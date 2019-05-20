@@ -69,6 +69,13 @@ If you want to use MongoDB Altas and MongoDB Stitch, you can set your username a
 
 We can use serverless to query pretrained models. In `chatbot (MongoDB Stitch)` example, we will use MongoDB Stitch function to query pretrained model stored in MongoDB.
 
+
+```bash
+mongo "mongodb://<username>:<password>@stitch.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=todo-tutorial1-uhdox:mongodb-atlas:local-userpass"
+```
+
+
+
 #### TODO
 
 Lots of things to do. This is just a demo project. Do not used in production environment! However, welcome all of you to propose suggestions.
