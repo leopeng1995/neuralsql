@@ -40,6 +40,9 @@ keywords = {
     "trainer",
     "with",
     "into",
+    'asc',
+    'desc',
+    'limit',
 }
 
 locs = locals()
@@ -86,6 +89,8 @@ whereExpression = infixNotation(whereCondition,
                                     (OR, 2, opAssoc.LEFT),
                                 ])
 
+limitExpression = intNum
+
 # loss='hinge', penalty='l2', alpha=1e-3, random_state=42, max_iter=5, tol=None
 withExpression = Group(
     Group(paramName + "=" + paramValue) + ZeroOrMore("," + Group(paramName + "=" + paramValue))
@@ -96,7 +101,8 @@ selectStmt <<= (SELECT + ('*' | columnNameList)("columns") +
                 FROM + tableNameList("tables") +
                 Optional(Group(TRAINER + columnName + Optional(WITH + withExpression)))("trainer") +
                 Optional(Group(INTO + tableName))("into") +
-                Optional(Group(WHERE + whereExpression), "")("where"))
+                Optional(Group(WHERE + whereExpression), "")("where")  +
+                Optional(LIMIT + limitExpression)('limit'))
 
 NeuralSQLParser = selectStmt
 

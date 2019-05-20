@@ -31,7 +31,7 @@ SELECT content FROM text8.train TRAINER WordCount;
 Word occurrences top 500:
 
 ```
-SELECT content FROM text8.train TRAINER WordCount DESC LIMIT 500;
+SELECT content FROM text8.train TRAINER WordCount LIMIT 500;
 ```
 
 #### Tutorial 1: Word2Vec
@@ -67,12 +67,14 @@ If you want to use MongoDB Altas and MongoDB Stitch, you can set your username a
 
 #### Serverless
 
-We can use serverless to query pretrained models. In `chatbot (MongoDB Stitch)` example, we will use MongoDB Stitch function to query pretrained model stored in MongoDB.
+We can use serverless to query pretrained models. In `chatbot (MongoDB Stitch)` example, we will use MongoDB Stitch function to query pretrained model stored in MongoDB. You can connect MongoDB Stitch using `mongo` command.
 
 
 ```bash
 mongo "mongodb://<username>:<password>@stitch.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=todo-tutorial1-uhdox:mongodb-atlas:local-userpass"
 ```
+
+Then you can create a function in your Stitch app console.
 
 ```
 exports = async function(text) {
@@ -87,6 +89,8 @@ exports = async function(text) {
   return EJSON.parse(res.body.text());
 };
 ```
+
+Finally, you can call this function in mongo shell.
 
 ```
 db.runCommand({
