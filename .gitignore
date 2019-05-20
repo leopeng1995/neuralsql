@@ -1,0 +1,7 @@
+neuralsql.egg-info/
+.idea/
+build/
+dist/
+examples/
+
+*.pyc
