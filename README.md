@@ -90,6 +90,13 @@ exports = async function(text) {
 };
 ```
 
+You should deploy the simple chatbot service in your server. We deployed one in our server (maybe slow or down).
+
+```bash
+cd samples/chatbot_service
+./run.sh
+```
+
 Finally, you can call this function in mongo shell.
 
 ```

@@ -22,6 +22,9 @@ def preprocess(result):
         if type(result['where'][0]) != str:
             parsed_result['where'] = result['where'][0][1]
 
+    if 'limit' in result:
+        parsed_result['limit'] = result['limit'][0][1]
+
     return parsed_result
 
 

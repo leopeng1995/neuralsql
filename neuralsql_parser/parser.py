@@ -102,7 +102,7 @@ selectStmt <<= (SELECT + ('*' | columnNameList)("columns") +
                 Optional(Group(TRAINER + columnName + Optional(WITH + withExpression)))("trainer") +
                 Optional(Group(INTO + tableName))("into") +
                 Optional(Group(WHERE + whereExpression), "")("where")  +
-                Optional(LIMIT + limitExpression)('limit'))
+                Optional(Group(LIMIT + limitExpression))('limit'))
 
 NeuralSQLParser = selectStmt
 
