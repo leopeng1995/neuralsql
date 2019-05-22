@@ -13,7 +13,7 @@ SQL is an intuitive way to query data. Nowadays, more and more data use MongoDB 
 ### Features
 
 * Use SQL-like syntax to query MongoDB and get data insight.
-* Used multiple backends, such as TensorFlow, Keras, or scikit-learn.
+* Use multiple backends, such as TensorFlow, Keras, or scikit-learn.
 * Computation Engine for generates MongoDB pipeline/map-reduce operator to reduce data transmission.
 * Auto-completion and syntax highlighting CLI.
 * Pretrained Model Auto Serving.
@@ -111,6 +111,11 @@ db.runCommand({
 Lots of things to do. This is just a demo project. Do not used in production environment! However, welcome all of you to propose suggestions.
 
 * TF-IDF Using MongoDB Map-Reduce
+
+#### RoadMap
+
+* Improve SQL Parser
+* Add more common machine learning / deep learning models support
 
 ### Thanks
 

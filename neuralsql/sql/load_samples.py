@@ -101,7 +101,8 @@ def load_classifier_twenty_news_dataset_into_mongodb(client, database='twenty_ne
 
             data_list.append(data)
 
-    db.train.insert_many(data_list)
+    if data_list:
+        db.train.insert_many(data_list)
 
     data_list = list()
     for i, datum in enumerate(twenty_test.data):
@@ -119,6 +120,7 @@ def load_classifier_twenty_news_dataset_into_mongodb(client, database='twenty_ne
 
             data_list.append(data)
 
-    db.test.insert_many(data_list)
+    if data_list:
+        db.test.insert_many(data_list)
 
     print('Classifier Data Prepared.')
