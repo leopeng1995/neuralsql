@@ -115,3 +115,4 @@ Lots of things to do. This is just a demo project. Do not used in production env
 ### Thanks
 
 * CLI is inspired by [mycli](https://github.com/dbcli/mycli).
+* [Presto](https://github.com/prestodb/presto)
