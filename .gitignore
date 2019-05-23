@@ -1,3 +1,5 @@
+.DS_Store
+
 neuralsql.egg-info/
 .idea/
 build/
