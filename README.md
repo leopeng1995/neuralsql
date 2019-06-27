@@ -1,6 +1,4 @@
-## NeuralSQL - Make MongoDB More Intelligent
-
-2019 MongoDB Hackathon Project
+## NeuralSQL - Make DataStore More Intelligent
 
 ### What is NeuralSQL?
 
@@ -116,8 +114,3 @@ Lots of things to do. This is just a demo project. Do not used in production env
 
 * Improve SQL Parser
 * Add more common machine learning / deep learning models support
-
-### Thanks
-
-* CLI is inspired by [mycli](https://github.com/dbcli/mycli).
-* [Presto](https://github.com/prestodb/presto)
