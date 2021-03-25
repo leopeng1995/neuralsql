@@ -19,7 +19,7 @@ install_requirements = [
 
     'click==6.7',
     'prompt-toolkit==2.0.9',
-    'PyYAML>=5.1,<5.2',
+    'PyYAML>=5.1,<5.5',
     'pymongo[tls,srv]==3.8.0',
     'pyparsing==2.4.0',
     'Pygments==2.4.0',
