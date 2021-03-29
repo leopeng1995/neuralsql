@@ -22,7 +22,7 @@ install_requirements = [
     'PyYAML>=5.1,<5.2',
     'pymongo[tls,srv]==3.8.0',
     'pyparsing==2.4.0',
-    'Pygments==2.4.0',
+    'Pygments==2.7.4',
     'tensorflow==1.13.1',
     'tqdm>=4.31.1',
     'requests>=2.21.0',
