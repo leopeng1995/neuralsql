@@ -23,7 +23,7 @@ install_requirements = [
     'pymongo[tls,srv]==3.8.0',
     'pyparsing==2.4.0',
     'Pygments==2.4.0',
-    'tensorflow==1.13.1',
+    'tensorflow==2.7.2',
     'tqdm>=4.31.1',
     'requests>=2.21.0',
     'scikit-learn>=0.21.0',
