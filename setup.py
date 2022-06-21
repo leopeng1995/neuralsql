@@ -28,7 +28,7 @@ install_requirements = [
     'requests>=2.21.0',
     'scikit-learn>=0.21.0',
     'jieba==0.39',
-    'numpy==1.16.3',
+    'numpy==1.22.0',
     'Flask>=1.0.3',
 ]
 
